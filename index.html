@@ -27,7 +27,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:900;
   height:68px;display:flex;align-items:center;
-  background:rgba(255,255,255,.98);border-bottom:1px solid var(--border);
+  background:rgba(11,24,41,.98);border-bottom:1px solid rgba(255,255,255,.08);
   backdrop-filter:blur(8px);transition:box-shadow .3s;
 }
 .nav.sh{box-shadow:0 2px 20px rgba(0,0,0,.08);}
@@ -36,16 +36,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .logo span{color:var(--teal);}
 .nlinks{display:flex;align-items:center;gap:4px;}
 .nlink{
-  font-size:13px;font-weight:500;color:var(--text-2);
+  font-size:13px;font-weight:500;color:rgba(255,255,255,.7);
   padding:8px 14px;
   position:relative;
   transition:color .2s;
   white-space:nowrap;
 }
-.nlink:hover{color:var(--navy);}
+.nlink:hover{color:#fff;}
 /* active indicator — bottom border */
 .nlink.active{
-  font-weight:700;color:var(--navy);
+  font-weight:700;color:#fff;
 }
 .nlink.active::after{
   content:'';
