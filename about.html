@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Gulf2Teach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--white:#FFFFFF;--off:#F4F6FA;--border:#DDE3ED;--text:#111827;--text-2:#374151;--text-3:#6B7280;--navy:#0B1829;--navy-2:#0F2040;--navy-3:#162B44;--teal:#009E8E;--teal-hi:#00B8A6;--teal-bg:rgba(0,158,142,.09);--teal-line:rgba(0,158,142,.22);--gold:#F0A500;--gold-hi:#FFB830;--ease:cubic-bezier(.16,1,.3,1);}
+html{scroll-behavior:smooth;}
+body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.nav{position:fixed;top:0;left:0;right:0;z-index:900;height:68px;display:flex;align-items:center;background:rgba(255,255,255,.98);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);transition:box-shadow .3s;}
+.nav.sh{box-shadow:0 2px 20px rgba(0,0,0,.08);}
+.nw{width:100%;max-width:1160px;margin:0 auto;padding:0 44px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:var(--navy);letter-spacing:-.025em;}
+.logo span{color:var(--teal);}
+.nlinks{display:flex;align-items:center;gap:4px;}
+.nlink{font-size:13px;font-weight:500;color:var(--text-2);padding:8px 14px;position:relative;transition:color .2s;white-space:nowrap;}
+.nlink:hover{color:var(--navy);}
+.nlink.active{font-weight:700;color:var(--navy);}
+.nlink.active::after{content:'';position:absolute;bottom:-1px;left:14px;right:14px;height:2px;background:var(--teal);}
+.nlink:not(.active):hover::after{content:'';position:absolute;bottom:-1px;left:14px;right:14px;height:2px;background:var(--border);}
+.nlink-divider{width:1px;height:18px;background:var(--border);margin:0 4px;}
+.napply{font-size:13px;font-weight:700;background:var(--teal);color:#fff;padding:10px 22px;border-radius:0;transition:background .2s;margin-left:8px;letter-spacing:.01em;}
+.napply:hover{background:var(--teal-hi);}
+.burger{display:none;flex-direction:column;gap:5px;padding:4px;}
+.burger span{display:block;width:22px;height:2px;background:var(--text);}
+.stag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:12px;}
+.sh2{font-family:'Sora',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--navy);margin-bottom:14px;}
+.sp{font-size:15px;font-weight:300;color:var(--text-3);line-height:1.8;}
+.bt{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;background:var(--teal);color:#fff;padding:13px 26px;border-radius:0;transition:background .2s,transform .2s;cursor:pointer;border:none;}
+.bt:hover{background:var(--teal-hi);transform:translateY(-1px);}
+.bo{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22);padding:12px 22px;border-radius:0;transition:all .2s;cursor:pointer;}
+.bo:hover{background:rgba(255,255,255,.18);}
+.btn-teal-outline{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;background:transparent;color:var(--teal);border:1.5px solid var(--teal);padding:11px 22px;border-radius:0;transition:all .2s;}
+.btn-teal-outline:hover{background:var(--teal);color:#fff;}
+.ph{padding:140px 44px 80px;position:relative;overflow:hidden;}
+.ph-dark{background:var(--navy);}
+.ph-w{max-width:1160px;margin:0 auto;position:relative;z-index:1;}
+.ph-glow{position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,158,142,.1) 0%,transparent 65%);pointer-events:none;}
+.ph-h1{font-family:'Sora',sans-serif;font-size:clamp(36px,4.5vw,56px);font-weight:800;line-height:1.06;letter-spacing:-.03em;color:#fff;margin-bottom:16px;}
+.ph-h1 span{color:var(--teal);}
+.ph-p{font-size:15px;font-weight:300;color:rgba(255,255,255,.62);line-height:1.8;max-width:520px;}
+.sec{padding:80px 44px;}
+.sec-w{max-width:1160px;margin:0 auto;}
+.sec-dark{background:var(--navy);padding:80px 44px;}
+.sec-off{background:var(--off);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 44px;}
+.foot{background:var(--navy-2);border-top:1px solid rgba(255,255,255,.06);padding:56px 44px 32px;}
+.fw{max-width:1160px;margin:0 auto;}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);align-items:start;}
+.fbrand{display:flex;flex-direction:column;}
+.flogo{font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:#fff;letter-spacing:-.025em;margin-bottom:12px;display:block;}
+.flogo span{color:var(--teal);}
+.ftagline{font-size:13px;font-weight:300;color:rgba(255,255,255,.46);line-height:1.72;max-width:280px;margin-bottom:14px;}
+.femail{font-size:13px;color:var(--teal);font-weight:500;}
+.fct{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.08);}
+.fclinks{display:flex;flex-direction:column;gap:11px;}
+.fclink{font-size:13px;font-weight:300;color:rgba(255,255,255,.5);transition:color .2s;}
+.fclink:hover{color:var(--teal);}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:22px;}
+.fcopy,.freg{font-size:11px;color:rgba(255,255,255,.26);letter-spacing:.04em;}
+@media(max-width:1024px){.nw,.ph-w,.fw{padding-left:32px;padding-right:32px;}.ph,.sec,.sec-dark,.sec-off,.foot{padding-left:32px;padding-right:32px;}.ftop{grid-template-columns:1fr 1fr;gap:36px;}}
+@media(max-width:768px){.nlinks{display:none;}.burger{display:flex;}.ph,.sec,.sec-dark,.sec-off,.foot{padding-left:22px;padding-right:22px;}.ftop{grid-template-columns:1fr;}}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.about-body p{font-size:15px;font-weight:300;color:var(--text-2);line-height:1.88;margin-bottom:14px;}
+.about-body strong{font-weight:600;color:var(--text);}
+.pillars{display:flex;flex-direction:column;}
+.pillar{display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--border);align-items:flex-start;}
+.pillar:last-child{border-bottom:1px solid var(--border);}
+.p-num{font-family:'Sora',sans-serif;font-size:11px;font-weight:700;color:var(--teal);min-width:28px;margin-top:2px;letter-spacing:.08em;}
+.p-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.p-body{font-size:13.5px;font-weight:300;color:var(--text-3);line-height:1.68;}
+
+
+
+
+
+
+
+
+
+.loc-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);overflow:hidden;margin-top:48px;}
+.loc-item{padding:28px 24px;border-right:1px solid var(--border);transition:background .2s;}
+.loc-item:last-child{border-right:none;}
+.loc-item:hover{background:var(--off);}
+@keyframes bp{0%,100%{opacity:1}50%{opacity:.35}}
+.lbadge{display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;}
+.lbadge.a{color:var(--teal);} .lbadge.s{color:var(--text-3);}
+.ldot{width:6px;height:6px;border-radius:50%;}
+.ldot.a{background:var(--teal);animation:bp 2.5s ease-in-out infinite;} .ldot.s{background:var(--text-3);}
+.lname{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:3px;letter-spacing:-.02em;}
+.lname.d{color:var(--text-3);}
+.lcountry{font-size:12px;color:var(--text-3);}
+.cta-b{background:var(--navy);padding:72px 44px;text-align:center;position:relative;overflow:hidden;}
+.cta-b::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(0,158,142,.1) 0%,transparent 60%);pointer-events:none;}
+.cta-bh{font-family:'Sora',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.06;letter-spacing:-.03em;color:#fff;max-width:560px;margin:14px auto 14px;position:relative;z-index:1;}
+.cta-bh span{color:var(--teal);}
+.cta-bp{font-size:14px;font-weight:300;color:rgba(255,255,255,.56);max-width:380px;margin:0 auto 36px;line-height:1.8;position:relative;z-index:1;}
+.cta-bbtns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;z-index:1;}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:40px;}.loc-strip{grid-template-columns:1fr 1fr;}.loc-item:nth-child(2){border-right:none;}.loc-item:nth-child(3){border-top:1px solid var(--border);}.cta-b{padding:56px 22px;}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nw">
+    <a href="index.html" class="logo">Gulf<span>2</span>Teach</a>
+    <div class="nlinks">
+      <a href="index.html" class="nlink">Home</a>
+      <a href="about.html" class="nlink active">About Us</a>
+      <a href="schools.html" class="nlink">Partner With Us</a>
+      <div class="nlink-divider"></div>
+      <button class="napply" onclick="window.location.href='index.html#apply'">Apply Now</button>
+    </div>
+    <button class="burger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="ph ph-dark">
+  <div class="ph-glow"></div>
+  <div class="ph-w">
+    <span class="stag">Who we are</span>
+    <h1 class="ph-h1">Built for the Gulf.<br><span>Not adapted for it.</span></h1>
+    <p class="ph-p">Gulf2Teach is a specialist teacher recruitment service permanently based in the region — with real relationships and genuine knowledge of how Gulf schools hire.</p>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="sec-w">
+    <div class="about-grid">
+      <div>
+        <span class="stag">Our story</span>
+        <h2 class="sh2">A recruiter who lives<br>where you're going.</h2>
+        <div class="about-body">
+          <p>Most teacher recruitment agencies operate from UK offices with limited understanding of what educators walk into when they arrive in Saudi Arabia. Gulf2Teach is different.</p>
+          <p>Founded by a QTS-qualified teacher residing in Saudi Arabia and operating from the UK, Gulf2Teach was built from a simple observation: <strong>hundreds of qualified teachers wanted to teach in the Gulf, but didn't know the right people.</strong></p>
+          <p>We exist to be that connection — making deliberate, vetted introductions between the right teacher and the right school, with regional knowledge no desk-based agency can replicate.</p>
+        </div>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><span class="p-num">01</span><div><p class="p-title">Regional knowledge</p><p class="p-body">Our founder resides in Saudi Arabia with strong links across the Gulf's international school sector. All business is conducted from the UK, giving us both regional insight and full legal clarity.</p></div></div>
+        <div class="pillar"><span class="p-num">02</span><div><p class="p-title">Vetted candidates only</p><p class="p-body">Every teacher in our pool has been individually assessed. Schools receive quality-controlled profiles — not bulk CVs sent to every inbox.</p></div></div>
+        <div class="pillar"><span class="p-num">03</span><div><p class="p-title">Transparent model</p><p class="p-body">Schools pay a placement fee after the teacher starts. No cost to teachers, no hidden charges. Simple and clearly stated from the beginning.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sec">
+  <div class="sec-w">
+    <span class="stag">Where we place</span>
+    <h2 class="sh2">Saudi Arabia & the wider Gulf.</h2>
+    <p class="sp" style="max-width:500px;margin-bottom:0;">Currently placing across three major Saudi cities, expanding across the GCC as our school partnerships grow.</p>
+    <div class="loc-strip">
+      <div class="loc-item"><div class="lbadge a"><div class="ldot a"></div>Active</div><div class="lname">Madinah</div><div class="lcountry">Saudi Arabia</div></div>
+      <div class="loc-item"><div class="lbadge a"><div class="ldot a"></div>Active</div><div class="lname">Jeddah</div><div class="lcountry">Saudi Arabia</div></div>
+      <div class="loc-item"><div class="lbadge a"><div class="ldot a"></div>Active</div><div class="lname">Riyadh</div><div class="lcountry">Saudi Arabia</div></div>
+      <div class="loc-item"><div class="lbadge s"><div class="ldot s"></div>Expanding</div><div class="lname d">GCC</div><div class="lcountry">UAE · Qatar · Beyond</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-b">
+  <span class="stag" style="color:var(--teal);position:relative;z-index:1;">Ready?</span>
+  <h2 class="cta-bh">Apply or <span>partner with us.</span></h2>
+  <p class="cta-bp">Whether you're a teacher looking for your next role or a school looking to hire — we're here.</p>
+  <div class="cta-bbtns">
+    <a href="index.html" class="bt">Apply as a Teacher →</a>
+    <a href="schools.html" class="bo">Partner With Us →</a>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="fw">
+    <div class="ftop">
+      <div class="fbrand">
+        <a href="index.html" class="flogo">Gulf<span>2</span>Teach</a>
+        <p class="ftagline">Connecting qualified native teachers with international schools and academies across Saudi Arabia and the GCC.</p>
+        <p class="femail">info@gulf2teach.com</p>
+      </div>
+      <div><p class="fct">Navigate</p><div class="fclinks"><a href="index.html" class="fclink">Home</a><a href="about.html" class="fclink">About Us</a><a href="schools.html" class="fclink">Partner With Us</a></div></div>
+      <div><p class="fct">Legal</p><div class="fclinks"><a href="privacy.html" class="fclink">Privacy Policy</a><a href="terms.html" class="fclink">Terms of Service</a></div></div>
+    </div>
+    <div class="fbot"><p class="fcopy">© 2026 Gulf2Teach Ltd</p><p class="freg">Registered in England & Wales · Company No: 17299706</p></div>
+  </div>
+</footer>
+<script>window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sh',scrollY>40));
+function toggleNav(){const m=document.querySelector('.nlinks');if(m.style.display==='flex'){m.style.cssText='';}else{m.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 22px 26px;gap:12px;border-bottom:1px solid #DDE3ED;z-index:800;box-shadow:0 8px 24px rgba(0,0,0,.08);';}}</script>
+</body>
+</html>
