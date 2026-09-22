@@ -58,6 +58,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   height:2px;background:var(--border);
 }
 .nlink-divider{width:1px;height:18px;background:var(--border);margin:0 4px;}
+.nlinks.open{display:flex;flex-direction:column;align-items:stretch;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 22px 26px;gap:12px;border-bottom:1px solid var(--border);z-index:800;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.nlinks.open .nlink{color:var(--text-2);}
+.nlinks.open .nlink:hover,.nlinks.open .nlink.active{color:var(--navy);}
+.nlinks.open .nlink.active::after{display:none;}
+.nlinks.open .nlink-divider{display:none;}
+.nlinks.open .napply{margin-left:0;text-align:center;}
 .napply{
   font-size:13px;font-weight:700;
   background:var(--teal);color:#fff;
@@ -68,7 +74,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 }
 .napply:hover{background:var(--teal-hi);}
 .burger{display:none;flex-direction:column;gap:5px;padding:4px;}
-.burger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;}
+.burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;}
 
 /* ── HERO ── */
 .hero{
@@ -815,7 +821,7 @@ section{scroll-margin-top:68px;}
 
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sh',scrollY>40));
-function toggleNav(){const m=document.querySelector('.nlinks');m.style.display=m.style.display==='flex'?'':'flex';if(m.style.display==='flex')m.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 22px 26px;gap:16px;border-bottom:1px solid var(--border);z-index:800;box-shadow:0 8px 24px rgba(0,0,0,.08);';}
+function toggleNav(){document.querySelector('.nlinks').classList.toggle('open');}
 function openM(){document.getElementById('ov').classList.add('on');document.body.style.overflow='hidden';setTimeout(()=>document.getElementById('fn').focus(),400);}
 function closeM(){document.getElementById('ov').classList.remove('on');document.body.style.overflow='';}
 document.getElementById('ov').addEventListener('click',function(e){if(e.target===this)closeM();});
