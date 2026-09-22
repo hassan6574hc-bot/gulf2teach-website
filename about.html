@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us — Gulf2Teach</title>
+<title>About Us | Gulf2Teach</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{--white:#FFFFFF;--off:#F4F6FA;--border:#DDE3ED;--text:#111827;--text-2:#374151;--text-3:#6B7280;--navy:#0B1829;--navy-2:#0F2040;--navy-3:#162B44;--teal:#009E8E;--teal-hi:#00B8A6;--teal-bg:rgba(0,158,142,.09);--teal-line:rgba(0,158,142,.22);--gold:#F0A500;--gold-hi:#FFB830;--ease:cubic-bezier(.16,1,.3,1);}
+:root{--white:#FFFFFF;--off:#F6F5F1;--border:#DDE3ED;--text:#111827;--text-2:#374151;--text-3:#6B7280;--navy:#0B1829;--navy-2:#0F2040;--teal:#009E8E;--teal-hi:#00B8A6;--teal-bg:rgba(0,158,142,.09);--teal-line:rgba(0,158,142,.22);--gold:#F0A500;--gold-hi:#FFB830;--gold-bg:rgba(240,165,0,.08);--gold-line:rgba(240,165,0,.28);--ease:cubic-bezier(.16,1,.3,1);}
 html{scroll-behavior:smooth;}
 body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 a{color:inherit;text-decoration:none;}
@@ -15,7 +15,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .nav{position:fixed;top:0;left:0;right:0;z-index:900;height:68px;display:flex;align-items:center;background:rgba(11,24,41,.98);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(8px);transition:box-shadow .3s;}
 .nav.sh{box-shadow:0 2px 20px rgba(0,0,0,.08);}
 .nw{width:100%;max-width:1160px;margin:0 auto;padding:0 44px 0 20px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:var(--navy);letter-spacing:-.025em;}
+.logo{font-family:'Inter',sans-serif;font-weight:800;font-size:21px;color:var(--navy);letter-spacing:-.025em;}
 .logo span{color:var(--teal);}
 .nlinks{display:flex;align-items:center;gap:4px;}
 .nlink{font-size:13px;font-weight:500;color:rgba(255,255,255,.7);padding:8px 14px;position:relative;transition:color .2s;white-space:nowrap;}
@@ -24,12 +24,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .nlink.active::after{content:'';position:absolute;bottom:-1px;left:14px;right:14px;height:2px;background:var(--teal);}
 .nlink:not(.active):hover::after{content:'';position:absolute;bottom:-1px;left:14px;right:14px;height:2px;background:var(--border);}
 .nlink-divider{width:1px;height:18px;background:var(--border);margin:0 4px;}
+.nlinks.open{display:flex;flex-direction:column;align-items:stretch;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 22px 26px;gap:12px;border-bottom:1px solid var(--border);z-index:800;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.nlinks.open .nlink{color:var(--text-2);}
+.nlinks.open .nlink:hover,.nlinks.open .nlink.active{color:var(--navy);}
+.nlinks.open .nlink-divider{display:none;}
+.nlinks.open .napply{margin-left:0;text-align:center;}
 .napply{font-size:13px;font-weight:700;background:var(--teal);color:#fff;padding:10px 22px;border-radius:0;transition:background .2s;margin-left:8px;letter-spacing:.01em;}
 .napply:hover{background:var(--teal-hi);}
 .burger{display:none;flex-direction:column;gap:5px;padding:4px;}
-.burger span{display:block;width:22px;height:2px;background:var(--text);}
-.stag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:12px;}
-.sh2{font-family:'Sora',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--navy);margin-bottom:14px;}
+.burger span{display:block;width:22px;height:2px;background:#fff;}
+.stag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:12px;}
+.sh2{font-family:'Inter',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;line-height:1.15;letter-spacing:-.025em;color:var(--navy);margin-bottom:14px;}
 .sp{font-size:15px;font-weight:300;color:var(--text-3);line-height:1.8;}
 .bt{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;background:var(--teal);color:#fff;padding:13px 26px;border-radius:0;transition:background .2s,transform .2s;cursor:pointer;border:none;}
 .bt:hover{background:var(--teal-hi);transform:translateY(-1px);}
@@ -41,7 +46,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .ph-dark{background:var(--navy);}
 .ph-w{max-width:1160px;margin:0 auto;position:relative;z-index:1;}
 .ph-glow{position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,158,142,.1) 0%,transparent 65%);pointer-events:none;}
-.ph-h1{font-family:'Sora',sans-serif;font-size:clamp(36px,4.5vw,56px);font-weight:800;line-height:1.06;letter-spacing:-.03em;color:#fff;margin-bottom:16px;}
+.ph-h1{font-family:'Inter',sans-serif;font-size:clamp(32px,4.2vw,52px);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:#fff;margin-bottom:16px;}
 .ph-h1 span{color:var(--teal);}
 .ph-p{font-size:15px;font-weight:300;color:rgba(255,255,255,.62);line-height:1.8;max-width:520px;}
 .sec{padding:80px 44px;}
@@ -52,7 +57,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .fw{max-width:1160px;margin:0 auto;}
 .ftop{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);align-items:start;}
 .fbrand{display:flex;flex-direction:column;}
-.flogo{font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:#fff;letter-spacing:-.025em;margin-bottom:12px;display:block;}
+.flogo{font-family:'Inter',sans-serif;font-weight:800;font-size:21px;color:#fff;letter-spacing:-.025em;margin-bottom:12px;display:block;}
 .flogo span{color:var(--teal);}
 .ftagline{font-size:13px;font-weight:300;color:rgba(255,255,255,.46);line-height:1.72;max-width:280px;margin-bottom:14px;}
 .femail{font-size:13px;color:var(--teal);font-weight:500;}
@@ -70,8 +75,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .pillars{display:flex;flex-direction:column;}
 .pillar{display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--border);align-items:flex-start;}
 .pillar:last-child{border-bottom:1px solid var(--border);}
-.p-num{font-family:'Sora',sans-serif;font-size:11px;font-weight:700;color:var(--teal);min-width:28px;margin-top:2px;letter-spacing:.08em;}
-.p-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.p-num{font-family:'Inter',sans-serif;font-size:11px;font-weight:800;color:var(--gold);min-width:28px;margin-top:2px;letter-spacing:.08em;}
+.p-title{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;}
 .p-body{font-size:13.5px;font-weight:300;color:var(--text-3);line-height:1.68;}
 
 
@@ -91,12 +96,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .lbadge.a{color:var(--teal);} .lbadge.s{color:var(--text-3);}
 .ldot{width:6px;height:6px;border-radius:50%;}
 .ldot.a{background:var(--teal);animation:bp 2.5s ease-in-out infinite;} .ldot.s{background:var(--text-3);}
-.lname{font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:3px;letter-spacing:-.02em;}
+.lname{font-family:'Inter',sans-serif;font-size:20px;font-weight:800;color:var(--navy);margin-bottom:3px;letter-spacing:-.02em;}
 .lname.d{color:var(--text-3);}
 .lcountry{font-size:12px;color:var(--text-3);}
-.cta-b{background:var(--navy);padding:72px 44px;text-align:center;position:relative;overflow:hidden;}
+.cta-b{background:var(--navy);padding:80px 44px;text-align:center;position:relative;overflow:hidden;}
 .cta-b::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(0,158,142,.1) 0%,transparent 60%);pointer-events:none;}
-.cta-bh{font-family:'Sora',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.06;letter-spacing:-.03em;color:#fff;max-width:560px;margin:14px auto 14px;position:relative;z-index:1;}
+.cta-bh{font-family:'Inter',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.06;letter-spacing:-.03em;color:#fff;max-width:560px;margin:14px auto 14px;position:relative;z-index:1;}
 .cta-bh span{color:var(--teal);}
 .cta-bp{font-size:14px;font-weight:300;color:rgba(255,255,255,.56);max-width:380px;margin:0 auto 36px;line-height:1.8;position:relative;z-index:1;}
 .cta-bbtns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;z-index:1;}
@@ -125,7 +130,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   <div class="ph-w">
     <span class="stag">Who we are</span>
     <h1 class="ph-h1">Built for the Gulf.<br><span>Not adapted for it.</span></h1>
-    <p class="ph-p">Gulf2Teach is a specialist teacher recruitment service permanently based in the region — with real relationships and genuine knowledge of how Gulf schools hire.</p>
+    <p class="ph-p">Gulf2Teach is a specialist teacher recruitment service permanently based in the region, with real relationships and genuine knowledge of how Gulf schools hire.</p>
   </div>
 </div>
 
@@ -138,12 +143,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         <div class="about-body">
           <p>Most teacher recruitment agencies operate from UK offices with limited understanding of what educators walk into when they arrive in Saudi Arabia. Gulf2Teach is different.</p>
           <p>Founded by a QTS-qualified teacher residing in Saudi Arabia and operating from the UK, Gulf2Teach was built from a simple observation: <strong>hundreds of qualified teachers wanted to teach in the Gulf, but didn't know the right people.</strong></p>
-          <p>We exist to be that connection — making deliberate, vetted introductions between the right teacher and the right school, with regional knowledge no desk-based agency can replicate.</p>
+          <p>We exist to be that connection: making deliberate, vetted introductions between the right teacher and the right school, with regional knowledge no desk-based agency can replicate.</p>
         </div>
       </div>
       <div class="pillars">
         <div class="pillar"><span class="p-num">01</span><div><p class="p-title">Regional knowledge</p><p class="p-body">Our founder resides in Saudi Arabia with strong links across the Gulf's international school sector. All business is conducted from the UK, giving us both regional insight and full legal clarity.</p></div></div>
-        <div class="pillar"><span class="p-num">02</span><div><p class="p-title">Vetted candidates only</p><p class="p-body">Every teacher in our pool has been individually assessed. Schools receive quality-controlled profiles — not bulk CVs sent to every inbox.</p></div></div>
+        <div class="pillar"><span class="p-num">02</span><div><p class="p-title">Vetted candidates only</p><p class="p-body">Every teacher in our pool has been individually assessed. Schools receive quality-controlled profiles, not bulk CVs sent to every inbox.</p></div></div>
         <div class="pillar"><span class="p-num">03</span><div><p class="p-title">Transparent model</p><p class="p-body">Schools pay a placement fee after the teacher starts. No cost to teachers, no hidden charges. Simple and clearly stated from the beginning.</p></div></div>
       </div>
     </div>
@@ -169,7 +174,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 <div class="cta-b">
   <span class="stag" style="color:var(--teal);position:relative;z-index:1;">Ready?</span>
   <h2 class="cta-bh">Apply or <span>partner with us.</span></h2>
-  <p class="cta-bp">Whether you're a teacher looking for your next role or a school looking to hire — we're here.</p>
+  <p class="cta-bp">Whether you're a teacher looking for your next role or a school looking to hire, we're here.</p>
   <div class="cta-bbtns">
     <a href="index.html" class="bt">Apply as a Teacher →</a>
     <a href="schools.html" class="bo">Partner With Us →</a>
@@ -191,6 +196,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   </div>
 </footer>
 <script>window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sh',scrollY>40));
-function toggleNav(){const m=document.querySelector('.nlinks');if(m.style.display==='flex'){m.style.cssText='';}else{m.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 22px 26px;gap:12px;border-bottom:1px solid #DDE3ED;z-index:800;box-shadow:0 8px 24px rgba(0,0,0,.08);';}}</script>
+function toggleNav(){document.querySelector('.nlinks').classList.toggle('open');}</script>
 </body>
 </html>

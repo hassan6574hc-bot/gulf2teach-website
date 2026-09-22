@@ -3,17 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Gulf2Teach</title>
+<title>Privacy Policy | Gulf2Teach</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --white:#FFFFFF;--off:#F7F8FC;--border:#DDE3ED;
+  --white:#FFFFFF;--off:#F6F5F1;--border:#DDE3ED;
   --text:#111827;--text-2:#374151;--text-3:#6B7280;
   --navy:#0B1829;--navy-2:#0F2040;
   --teal:#009E8E;--teal-hi:#00B8A6;
   --teal-bg:rgba(0,158,142,.09);--teal-line:rgba(0,158,142,.22);
+  --gold:#F0A500;--gold-hi:#FFB830;--gold-bg:rgba(240,165,0,.08);--gold-line:rgba(240,165,0,.28);
+  --ease:cubic-bezier(.16,1,.3,1);
 }
 html{scroll-behavior:smooth;}
 body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;}
@@ -21,18 +23,27 @@ a{color:var(--teal);text-decoration:none;}
 a:hover{text-decoration:underline;}
 
 /* NAV */
-.nav{height:66px;display:flex;align-items:center;background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;}
+.nav{height:68px;display:flex;align-items:center;background:rgba(11,24,41,.98);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:900;}
 .nw{width:100%;max-width:840px;margin:0 auto;padding:0 40px 0 20px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Sora',sans-serif;font-weight:800;font-size:20px;color:var(--navy);letter-spacing:-.025em;}
+.logo{font-family:'Inter',sans-serif;font-weight:800;font-size:20px;color:#fff;letter-spacing:-.025em;}
 .logo span{color:var(--teal);}
-.back{font-size:13px;font-weight:500;color:var(--text-3);display:flex;align-items:center;gap:5px;transition:color .2s;}
-.back:hover{color:var(--teal);text-decoration:none;}
+.nlinks{display:flex;align-items:center;gap:4px;}
+.nlink{font-size:13px;font-weight:500;color:rgba(255,255,255,.7);padding:8px 14px;transition:color .2s;white-space:nowrap;}
+.nlink:hover{color:#fff;}
+.napply{font-size:13px;font-weight:700;background:var(--teal);color:#fff;padding:10px 22px;border-radius:0;transition:background .2s;margin-left:8px;letter-spacing:.01em;}
+.napply:hover{background:var(--teal-hi);}
+.burger{display:none;flex-direction:column;gap:5px;padding:4px;}
+.burger span{display:block;width:22px;height:2px;background:#fff;}
+.nlinks.open{display:flex;flex-direction:column;align-items:stretch;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 22px 26px;gap:12px;border-bottom:1px solid var(--border);z-index:800;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.nlinks.open .nlink{color:var(--text-2);}
+.nlinks.open .nlink:hover{color:var(--navy);}
+.nlinks.open .napply{margin-left:0;text-align:center;}
 
 /* HEADER */
 .ph{background:var(--navy);padding:72px 40px 64px;}
 .phw{max-width:840px;margin:0 auto;}
-.ptag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:14px;}
-.ph1{font-family:'Sora',sans-serif;font-size:clamp(30px,4vw,46px);font-weight:800;color:#FFFFFF;letter-spacing:-.025em;line-height:1.08;margin-bottom:12px;}
+.ptag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:14px;}
+.ph1{font-family:'Inter',sans-serif;font-size:clamp(30px,4vw,46px);font-weight:800;color:#FFFFFF;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px;}
 .pmeta{font-size:13px;color:rgba(255,255,255,.5);}
 
 /* CONTENT */
@@ -50,7 +61,7 @@ a:hover{text-decoration:underline;}
 .clause:last-child{border-bottom:1px solid var(--border);}
 
 .cl{
-  font-family:'Sora',sans-serif;
+  font-family:'Inter',sans-serif;
   font-size:13px;font-weight:700;
   color:var(--navy);letter-spacing:-.01em;
   padding-top:2px;
@@ -60,7 +71,7 @@ a:hover{text-decoration:underline;}
 .cl::before{
   content:'';
   display:block;width:3px;min-width:3px;height:16px;
-  background:var(--teal);border-radius:2px;margin-top:1px;flex-shrink:0;
+  background:var(--teal);margin-top:1px;flex-shrink:0;
 }
 
 .cr{font-size:14px;font-weight:300;color:var(--text-2);line-height:1.82;}
@@ -72,7 +83,8 @@ a:hover{text-decoration:underline;}
 /* contact block */
 .cblock{
   background:var(--off);border:1px solid var(--border);
-  border-radius:10px;padding:24px 28px;margin-top:12px;
+  border-left:3px solid var(--teal);
+  border-radius:0;padding:24px 28px;margin-top:12px;
 }
 .cblock p{font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:5px;}
 .cblock p:last-child{margin-bottom:0;}
@@ -80,7 +92,7 @@ a:hover{text-decoration:underline;}
 /* FOOTER */
 .foot{background:var(--navy-2);border-top:1px solid rgba(255,255,255,.06);padding:36px 40px;}
 .fw{max-width:840px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-.flogo{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:rgba(255,255,255,.7);letter-spacing:-.02em;}
+.flogo{font-family:'Inter',sans-serif;font-weight:800;font-size:18px;color:rgba(255,255,255,.7);letter-spacing:-.02em;}
 .flogo span{color:var(--teal);}
 .flinks{display:flex;gap:22px;}
 .flink{font-size:12.5px;color:rgba(255,255,255,.5);transition:color .2s;}
@@ -88,6 +100,7 @@ a:hover{text-decoration:underline;}
 .fcopy{font-size:11px;color:rgba(255,255,255,.3);}
 
 @media(max-width:768px){
+  .nlinks{display:none;}.burger{display:flex;}
   .nw,.phw,.body,.fw{padding-left:22px;padding-right:22px;}
   .ph{padding:56px 22px 48px;}
   .clause{grid-template-columns:1fr;gap:10px;}
@@ -99,15 +112,16 @@ a:hover{text-decoration:underline;}
 </head>
 <body>
 
-<nav class="nav" style="background:rgba(11,24,41,.98);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:10;height:68px;display:flex;align-items:center;">
+<nav class="nav">
   <div class="nw">
     <a href="index.html" class="logo"><img src="logo-icon.png" alt="Gulf2Teach" style="height:40px;display:block;"></a>
-    <div style="display:flex;align-items:center;gap:4px;">
-      <a href="index.html" style="font-size:13px;font-weight:500;color:rgba(255,255,255,.7);padding:8px 14px;text-decoration:none;">Home</a>
-      <a href="about.html" style="font-size:13px;font-weight:500;color:rgba(255,255,255,.7);padding:8px 14px;text-decoration:none;">About Us</a>
-      <a href="schools.html" style="font-size:13px;font-weight:500;color:rgba(255,255,255,.7);padding:8px 14px;text-decoration:none;">Partner With Us</a>
-      <a href="index.html" style="font-size:13px;font-weight:700;background:#009E8E;color:#fff;padding:10px 22px;margin-left:8px;text-decoration:none;">Apply Now</a>
+    <div class="nlinks">
+      <a href="index.html" class="nlink">Home</a>
+      <a href="about.html" class="nlink">About Us</a>
+      <a href="schools.html" class="nlink">Partner With Us</a>
+      <a href="index.html" class="napply">Apply Now</a>
     </div>
+    <button class="burger" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -147,22 +161,22 @@ a:hover{text-decoration:underline;}
 
   <div class="clause">
     <div class="cl">Who we share it with</div>
-    <div class="cr"><strong>Schools and academies in the GCC</strong> — by submitting your application you consent to your profile being shared with suitable schools for the purpose of securing you an interview and placement.<br><br>We do not sell or share your data for marketing under any circumstances.</div>
+    <div class="cr"><strong>Schools and academies in the GCC:</strong> by submitting your application you consent to your profile being shared with suitable schools for the purpose of securing you an interview and placement.<br><br>We do not sell or share your data for marketing under any circumstances.</div>
   </div>
 
   <div class="clause">
     <div class="cl">Legal basis</div>
     <div class="cr">We process your data under UK GDPR on the basis of:
       <ul>
-        <li><strong>Legitimate interests</strong> — to operate our recruitment service</li>
-        <li><strong>Consent</strong> — you have voluntarily submitted your application</li>
+        <li><strong>Legitimate interests:</strong> to operate our recruitment service</li>
+        <li><strong>Consent:</strong> you have voluntarily submitted your application</li>
       </ul>
     </div>
   </div>
 
   <div class="clause">
     <div class="cl">How long we keep it</div>
-    <div class="cr">Up to <strong>24 months</strong> from your application date, then securely deleted — unless you are placed and we need to maintain records, or you have asked us to keep your profile on file.</div>
+    <div class="cr">Up to <strong>24 months</strong> from your application date, then securely deleted, unless you are placed and we need to maintain records, or you have asked us to keep your profile on file.</div>
   </div>
 
   <div class="clause">
@@ -201,5 +215,8 @@ a:hover{text-decoration:underline;}
   </div>
 </footer>
 
+<script>
+function toggleNav(){document.querySelector('.nlinks').classList.toggle('open');}
+</script>
 </body>
 </html>

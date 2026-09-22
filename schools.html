@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Partner With Us — Gulf2Teach</title>
+<title>Partner With Us | Gulf2Teach</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-:root{--white:#FFFFFF;--off:#F4F6FA;--border:#DDE3ED;--text:#111827;--text-2:#374151;--text-3:#6B7280;--navy:#0B1829;--navy-2:#0F2040;--navy-3:#162B44;--teal:#009E8E;--teal-hi:#00B8A6;--teal-bg:rgba(0,158,142,.09);--teal-line:rgba(0,158,142,.22);--gold:#F0A500;--gold-hi:#FFB830;--ease:cubic-bezier(.16,1,.3,1);}
+:root{--white:#FFFFFF;--off:#F6F5F1;--border:#DDE3ED;--text:#111827;--text-2:#374151;--text-3:#6B7280;--navy:#0B1829;--navy-2:#0F2040;--teal:#009E8E;--teal-hi:#00B8A6;--teal-bg:rgba(0,158,142,.09);--teal-line:rgba(0,158,142,.22);--gold:#F0A500;--gold-hi:#FFB830;--gold-bg:rgba(240,165,0,.08);--gold-line:rgba(240,165,0,.28);--ease:cubic-bezier(.16,1,.3,1);}
 html{scroll-behavior:smooth;}
 body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
 a{color:inherit;text-decoration:none;}
@@ -15,7 +15,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .nav{position:fixed;top:0;left:0;right:0;z-index:900;height:68px;display:flex;align-items:center;background:rgba(11,24,41,.98);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(8px);transition:box-shadow .3s;}
 .nav.sh{box-shadow:0 2px 20px rgba(0,0,0,.08);}
 .nw{width:100%;max-width:1160px;margin:0 auto;padding:0 44px 0 20px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:var(--navy);letter-spacing:-.025em;}
+.logo{font-family:'Inter',sans-serif;font-weight:800;font-size:21px;color:var(--navy);letter-spacing:-.025em;}
 .logo span{color:var(--teal);}
 .nlinks{display:flex;align-items:center;gap:4px;}
 .nlink{font-size:13px;font-weight:500;color:rgba(255,255,255,.7);padding:8px 14px;position:relative;transition:color .2s;white-space:nowrap;}
@@ -24,12 +24,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .nlink.active::after{content:'';position:absolute;bottom:-1px;left:14px;right:14px;height:2px;background:var(--teal);}
 .nlink:not(.active):hover::after{content:'';position:absolute;bottom:-1px;left:14px;right:14px;height:2px;background:var(--border);}
 .nlink-divider{width:1px;height:18px;background:var(--border);margin:0 4px;}
+.nlinks.open{display:flex;flex-direction:column;align-items:stretch;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 22px 26px;gap:12px;border-bottom:1px solid var(--border);z-index:800;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.nlinks.open .nlink{color:var(--text-2);}
+.nlinks.open .nlink:hover,.nlinks.open .nlink.active{color:var(--navy);}
+.nlinks.open .nlink-divider{display:none;}
+.nlinks.open .napply{margin-left:0;text-align:center;}
 .napply{font-size:13px;font-weight:700;background:var(--teal);color:#fff;padding:10px 22px;border-radius:0;transition:background .2s;margin-left:8px;letter-spacing:.01em;}
 .napply:hover{background:var(--teal-hi);}
 .burger{display:none;flex-direction:column;gap:5px;padding:4px;}
-.burger span{display:block;width:22px;height:2px;background:var(--text);}
-.stag{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:12px;}
-.sh2{font-family:'Sora',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--navy);margin-bottom:14px;}
+.burger span{display:block;width:22px;height:2px;background:#fff;}
+.stag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:12px;}
+.sh2{font-family:'Inter',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;line-height:1.15;letter-spacing:-.025em;color:var(--navy);margin-bottom:14px;}
 .sp{font-size:15px;font-weight:300;color:var(--text-3);line-height:1.8;}
 .bt{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;background:var(--teal);color:#fff;padding:13px 26px;border-radius:0;transition:background .2s,transform .2s;cursor:pointer;border:none;}
 .bt:hover{background:var(--teal-hi);transform:translateY(-1px);}
@@ -41,7 +46,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .ph-dark{background:var(--navy);}
 .ph-w{max-width:1160px;margin:0 auto;position:relative;z-index:1;}
 .ph-glow{position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,158,142,.1) 0%,transparent 65%);pointer-events:none;}
-.ph-h1{font-family:'Sora',sans-serif;font-size:clamp(36px,4.5vw,56px);font-weight:800;line-height:1.06;letter-spacing:-.03em;color:#fff;margin-bottom:16px;}
+.ph-h1{font-family:'Inter',sans-serif;font-size:clamp(36px,4.5vw,56px);font-weight:800;line-height:1.06;letter-spacing:-.03em;color:#fff;margin-bottom:16px;}
 .ph-h1 span{color:var(--teal);}
 .ph-p{font-size:15px;font-weight:300;color:rgba(255,255,255,.62);line-height:1.8;max-width:520px;}
 .sec{padding:80px 44px;}
@@ -52,7 +57,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .fw{max-width:1160px;margin:0 auto;}
 .ftop{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);align-items:start;}
 .fbrand{display:flex;flex-direction:column;}
-.flogo{font-family:'Sora',sans-serif;font-weight:800;font-size:21px;color:#fff;letter-spacing:-.025em;margin-bottom:12px;display:block;}
+.flogo{font-family:'Inter',sans-serif;font-weight:800;font-size:21px;color:#fff;letter-spacing:-.025em;margin-bottom:12px;display:block;}
 .flogo span{color:var(--teal);}
 .ftagline{font-size:13px;font-weight:300;color:rgba(255,255,255,.46);line-height:1.72;max-width:280px;margin-bottom:14px;}
 .femail{font-size:13px;color:var(--teal);font-weight:500;}
@@ -74,7 +79,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
   position:relative;overflow:hidden;
 }
 .sh-hero-w{max-width:1160px;margin:0 auto;position:relative;z-index:1;}
-.sh-hero-h1{font-family:'Sora',sans-serif;font-size:clamp(36px,4.5vw,58px);font-weight:800;line-height:1.05;letter-spacing:-.03em;color:#fff;margin-bottom:16px;}
+.sh-hero-h1{font-family:'Inter',sans-serif;font-size:clamp(32px,4.2vw,52px);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:#fff;margin-bottom:16px;}
 .sh-hero-h1 span{color:var(--teal);}
 .sh-hero-p{font-size:16px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.82;max-width:520px;margin-bottom:32px;}
 
@@ -83,16 +88,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .step{padding:36px 32px;border-right:1px solid var(--border);position:relative;}
 .step:last-child{border-right:none;}
 .step:hover{background:var(--off);}
-.step-n{font-family:'Sora',sans-serif;font-size:40px;font-weight:800;color:var(--teal-bg);line-height:1;margin-bottom:16px;letter-spacing:-.03em;border:2px solid var(--teal-line);width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--teal);}
-.step-title{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.step-n{font-family:'Inter',sans-serif;font-size:20px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:16px;letter-spacing:-.02em;border:1.5px solid var(--gold-line);background:var(--gold-bg);width:56px;height:56px;display:flex;align-items:center;justify-content:center;}
+.step-title{font-family:'Inter',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;}
 .step-body{font-size:13.5px;font-weight:300;color:var(--text-3);line-height:1.7;}
 
 /* WHY GULF2TEACH */
 .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);border:1px solid var(--border);margin-top:48px;overflow:hidden;}
 .why-card{background:var(--white);padding:32px 28px;transition:background .2s;}
 .why-card:hover{background:var(--off);}
-.why-ico{font-size:22px;margin-bottom:12px;}
-.why-title{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.why-ico{font-family:'Inter',sans-serif;font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em;margin-bottom:12px;}
+.why-title{font-family:'Inter',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px;}
 .why-body{font-size:13px;font-weight:300;color:var(--text-3);line-height:1.65;}
 
 /* FORM SECTION */
@@ -101,17 +106,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 /* sidebar */
 .form-side{}
-.form-side-h{font-family:'Sora',sans-serif;font-size:clamp(22px,2.5vw,30px);font-weight:800;color:var(--navy);line-height:1.18;letter-spacing:-.02em;margin:14px 0 16px;}
+.form-side-h{font-family:'Inter',sans-serif;font-size:clamp(22px,2.5vw,30px);font-weight:800;color:var(--navy);line-height:1.18;letter-spacing:-.02em;margin:14px 0 16px;}
 .form-side-p{font-size:14px;font-weight:300;color:var(--text-3);line-height:1.8;margin-bottom:28px;}
 .contact-detail{display:flex;flex-direction:column;gap:12px;}
 .cd-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;background:var(--white);border:1px solid var(--border);}
-.cd-ico{font-size:16px;flex-shrink:0;margin-top:1px;}
-.cd-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:3px;}
+.cd-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:3px;}
 .cd-val{font-size:13.5px;font-weight:500;color:var(--navy);}
 
 /* form */
 .school-form{background:var(--white);border:1px solid var(--border);padding:36px;}
-.form-title{font-family:'Sora',sans-serif;font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:6px;}
+.form-title{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:6px;}
 .form-sub{font-size:12px;color:var(--text-3);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
 .fl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);}
@@ -140,7 +144,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .consent-text{font-size:12.5px;font-weight:300;color:var(--text-3);line-height:1.6;}
 .consent-text a{color:var(--teal);}
 
-.sub-btn{width:100%;background:var(--teal);color:#fff;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;padding:15px 24px;border:none;cursor:pointer;letter-spacing:.02em;transition:background .2s;margin-top:4px;}
+.sub-btn{width:100%;background:var(--teal);color:#fff;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;padding:15px 24px;border:none;cursor:pointer;letter-spacing:.02em;transition:background .2s;margin-top:4px;}
 .sub-btn:hover{background:var(--teal-hi);}
 .sub-btn:disabled{opacity:.45;cursor:not-allowed;}
 .form-note{font-size:11px;color:var(--text-3);margin-top:12px;text-align:center;line-height:1.6;}
@@ -149,8 +153,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .form-success{display:none;padding:48px 28px;text-align:center;}
 .form-success.on{display:block;}
 .form-body.gone{display:none;}
-.succ-ico{font-size:40px;margin-bottom:16px;}
-.succ-h{font-family:'Sora',sans-serif;font-size:22px;font-weight:800;color:var(--navy);margin-bottom:10px;}
+.succ-ico{font-size:36px;font-weight:700;color:var(--teal);margin-bottom:16px;}
+.succ-h{font-family:'Inter',sans-serif;font-size:22px;font-weight:800;color:var(--navy);margin-bottom:10px;}
 .succ-p{font-size:14px;color:var(--text-3);line-height:1.8;max-width:300px;margin:0 auto;}
 
 @media(max-width:1024px){.form-layout{grid-template-columns:1fr;gap:48px;}.steps{grid-template-columns:1fr;}.step{border-right:none;border-bottom:1px solid var(--border);}.step:last-child{border-bottom:none;}.why-grid{grid-template-columns:1fr;}.sh-hero{padding-left:32px;padding-right:32px;}}
@@ -178,8 +182,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 <div class="sh-hero">
   <div class="sh-hero-w">
     <span class="stag">For schools</span>
-    <h1 class="sh-hero-h1">Access <span>vetted, qualified</span><br>native teachers — fast.</h1>
-    <p class="sh-hero-p">Gulf2Teach is a specialist recruitment partner with strong regional roots. Our founder resides in Saudi Arabia and is well connected across the Gulf's international school sector. We don't send bulk CVs — we make deliberate introductions based on your exact needs, and we stand behind every placement.</p>
+    <h1 class="sh-hero-h1">Access <span>vetted, qualified</span><br>native teachers. Fast.</h1>
+    <p class="sh-hero-p">Gulf2Teach is a specialist recruitment partner with strong regional roots. Our founder resides in Saudi Arabia and is well connected across the Gulf's international school sector. We don't send bulk CVs. We make deliberate introductions based on your exact needs, and we stand behind every placement.</p>
     <a href="#enquire" class="bt">Make an Enquiry →</a>
   </div>
 </div>
@@ -193,7 +197,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <div class="step">
         <div class="step-n">1</div>
         <p class="step-title">Tell us what you need</p>
-        <p class="step-body">Send us your requirements — subject, level, timeline, and any specific criteria. One conversation is enough to get started.</p>
+        <p class="step-body">Send us your requirements: subject, level, timeline, and any specific criteria. One conversation is enough to get started.</p>
       </div>
       <div class="step">
         <div class="step-n">2</div>
@@ -216,22 +220,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
     <h2 class="sh2">What sets us apart.</h2>
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-ico">📍</div>
+        <div class="why-ico">01</div>
         <p class="why-title">Strong regional connections</p>
         <p class="why-body">Our founder resides in Saudi Arabia and is well connected across the Gulf's international school sector. We understand Gulf school culture, hiring cycles, and what teachers need on the ground.</p>
       </div>
       <div class="why-card">
-        <div class="why-ico">✓</div>
+        <div class="why-ico">02</div>
         <p class="why-title">Pre-screened candidates only</p>
         <p class="why-body">Every teacher in our pool has been individually vetted against qualification, experience, and commitment criteria. No time wasted on unsuitable candidates.</p>
       </div>
       <div class="why-card">
-        <div class="why-ico">🤝</div>
+        <div class="why-ico">03</div>
         <p class="why-title">No placement, no fee</p>
-        <p class="why-body">We charge a straightforward placement fee — payable 30 days after your chosen teacher starts. No upfront costs, no retainers, no surprises.</p>
+        <p class="why-body">We charge a straightforward placement fee, payable 30 days after your chosen teacher starts. No upfront costs, no retainers, no surprises.</p>
       </div>
       <div class="why-card">
-        <div class="why-ico">🔄</div>
+        <div class="why-ico">04</div>
         <p class="why-title">Long-term partnership</p>
         <p class="why-body">We build relationships with schools, not just fill one-off roles. The more we understand your school, the better and faster our placements become over time.</p>
       </div>
@@ -250,15 +254,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
       <p class="form-side-p">Fill in the short form and we'll be in touch within 2 business days to discuss your requirements and how we can help.</p>
       <div class="contact-detail">
         <div class="cd-item">
-          <div class="cd-ico">✉</div>
           <div><div class="cd-label">Email</div><div class="cd-val">info@gulf2teach.com</div></div>
         </div>
         <div class="cd-item">
-          <div class="cd-ico">📍</div>
           <div><div class="cd-label">Regional presence</div><div class="cd-val">Founder resides in Saudi Arabia · well connected across the GCC</div></div>
         </div>
         <div class="cd-item">
-          <div class="cd-ico">🏢</div>
           <div><div class="cd-label">Registered</div><div class="cd-val">England & Wales · Gulf2Teach Ltd</div></div>
         </div>
       </div>
@@ -273,11 +274,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
         <form id="sf" action="https://formspree.io/f/xojodgde" method="POST" novalidate>
 
           <div class="fg2">
-            <div class="fg" id="sfg-sn"><label class="fl" for="sn">School name <span class="r">*</span></label><input class="fi" type="text" id="sn" name="school_name" placeholder="Your school name" required><span class="ferr">Required.</span></div>
-            <div class="fg" id="sfg-sl"><label class="fl" for="sl">School location <span class="r">*</span></label><input class="fi" type="text" id="sl" name="school_location" placeholder="City, Country" required><span class="ferr">Required.</span></div>
-            <div class="fg" id="sfg-cn"><label class="fl" for="cn">Contact name <span class="r">*</span></label><input class="fi" type="text" id="cn" name="contact_name" placeholder="Your full name" required><span class="ferr">Required.</span></div>
-            <div class="fg" id="sfg-ce"><label class="fl" for="ce">Contact email <span class="r">*</span></label><input class="fi" type="email" id="ce" name="contact_email" placeholder="hr@school.com" required><span class="ferr">Valid email required.</span></div>
-            <div class="fg" id="sfg-pos"><label class="fl" for="pos">Your role <span class="r">*</span></label><select class="fs" id="pos" name="role" required><option value="" disabled selected>Select</option><option>HR / Recruitment</option><option>Principal / Head Teacher</option><option>Senior Leadership</option><option>Other</option></select><span class="ferr">Required.</span></div>
+            <div class="fg" id="sfg-sn"><label class="fl" for="sn">School name <span class="r">*</span></label><input class="fi" type="text" id="sn" name="school_name" required><span class="ferr">Required.</span></div>
+            <div class="fg" id="sfg-sl"><label class="fl" for="sl">School location <span class="r">*</span></label><input class="fi" type="text" id="sl" name="school_location" required><span class="ferr">Required.</span></div>
+            <div class="fg" id="sfg-cn"><label class="fl" for="cn">Contact name <span class="r">*</span></label><input class="fi" type="text" id="cn" name="contact_name" required><span class="ferr">Required.</span></div>
+            <div class="fg" id="sfg-ce"><label class="fl" for="ce">Contact email <span class="r">*</span></label><input class="fi" type="email" id="ce" name="contact_email" required><span class="ferr">Valid email required.</span></div>
+            <div class="fg" id="sfg-pos"><label class="fl" for="pos">Your role <span class="r">*</span></label><select class="fs" id="pos" name="role" required onchange="toggleOtherRole(this)"><option value="" disabled selected>Select</option><option>HR / Recruitment</option><option>Principal / Head Teacher</option><option>Senior Leadership</option><option value="Other">Other</option></select><div class="fg" id="other-role-wrap" style="display:none;margin-top:8px;"><label class="fl" for="other-role">Please specify</label><input class="fi" type="text" id="other-role" name="role_other"></div><span class="ferr">Required.</span></div>
             <div class="fg" id="sfg-tim"><label class="fl" for="tim">Hiring timeline <span class="r">*</span></label><select class="fs" id="tim" name="timeline" required><option value="" disabled selected>Select</option><option>Immediately</option><option>Within 1 month</option><option>1–3 months</option><option>Next academic year</option></select><span class="ferr">Required.</span></div>
           </div>
 
@@ -290,7 +291,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
             <label class="subj-check" onclick="toggleCheck(this)"><input type="checkbox" name="subjects" value="Primary"> Primary</label>
             <label class="subj-check" onclick="toggleCheck(this)" id="other-check-label"><input type="checkbox" name="subjects" value="Other" id="other-chk" onchange="toggleOtherField(this)"> Other</label>
           </div>
-          <div class="fg" id="other-subject-wrap" style="display:none;margin-top:4px;"><label class="fl" for="other-subj">Please specify subject(s)</label><input class="fi" type="text" id="other-subj" name="other_subject" placeholder="e.g. Art & Design, History, Physical Education"></div>
+          <div class="fg" id="other-subject-wrap" style="display:none;margin-top:4px;"><label class="fl" for="other-subj">Please specify subject(s)</label><input class="fi" type="text" id="other-subj" name="other_subject"></div>
           <div class="fg" id="sfg-sub-err" style="margin-top:-6px;display:none;"><span class="ferr" style="display:block;">Please select at least one subject.</span></div>
 
           <div class="fg"><label class="fl" for="msg">Tell us more <span class="r">*</span></label><textarea class="fta" id="msg" name="message" placeholder="Number of positions, specific requirements, curriculum, preferred start date, anything else we should know…" required></textarea></div>
@@ -302,7 +303,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
           <input type="hidden" name="_subject" value="New Gulf2Teach School Enquiry">
           <button type="submit" class="sub-btn" id="sf-btn">Send Enquiry →</button>
-          <p class="form-note">We respond within 2 business days. No cost or commitment to enquire.</p>
+          <p class="form-note">No cost or commitment to enquire.</p>
         </form>
       </div>
 
@@ -333,11 +334,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sh',scrollY>40));
-function toggleNav(){const m=document.querySelector('.nlinks');if(m.style.display==='flex'){m.style.cssText='';}else{m.style.cssText='display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:#fff;padding:20px 22px 26px;gap:12px;border-bottom:1px solid #DDE3ED;z-index:800;box-shadow:0 8px 24px rgba(0,0,0,.08);';}}
+function toggleNav(){document.querySelector('.nlinks').classList.toggle('open');}
 
 function toggleOtherField(chk){
   document.getElementById('other-subject-wrap').style.display = chk.checked ? 'flex' : 'none';
   if(!chk.checked) document.getElementById('other-subj').value='';
+}
+function toggleOtherRole(sel){
+  const show = sel.value==='Other';
+  document.getElementById('other-role-wrap').style.display = show ? 'flex' : 'none';
+  if(!show) document.getElementById('other-role').value='';
 }
 function toggleCheck(label){
   // handled by default checkbox behaviour, just toggle visual class
@@ -368,7 +374,7 @@ document.getElementById('sf').addEventListener('submit', async function(e){
     const r=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
     if(r.ok){document.getElementById('school-form-body').classList.add('gone');document.getElementById('sf-success').classList.add('on');}
     else{btn.disabled=false;btn.textContent='Send Enquiry →';alert('Something went wrong. Email us at info@gulf2teach.com');}
-  }catch{document.getElementById('school-form-body').classList.add('gone');document.getElementById('sf-success').classList.add('on');}
+  }catch{btn.disabled=false;btn.textContent='Send Enquiry →';alert('Could not reach the server. Please check your connection and try again, or email us at info@gulf2teach.com');}
 });
 document.querySelectorAll('.fi,.fs,.fta').forEach(el=>el.addEventListener('input',()=>{el.closest('.fg').classList.remove('err');el.style.borderColor='';}) );
 </script>
