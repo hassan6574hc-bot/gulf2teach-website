@@ -95,8 +95,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .htdot{width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px;}
 .htt{font-size:12px;color:rgba(255,255,255,.38);letter-spacing:.02em;}
 .hcards{display:flex;flex-direction:column;gap:16px;}
-.hcard{background:rgba(22,43,68,.8);border:1px solid rgba(255,255,255,.08);border-radius:0;padding:22px 24px;position:relative;overflow:hidden;backdrop-filter:blur(8px);transition:border-color .3s;}
-.hcard:hover{border-color:rgba(240,165,0,.35);}
+.hcard{background:rgba(22,43,68,.8);border:1px solid rgba(255,255,255,.08);border-radius:0;padding:22px 24px;position:relative;overflow:hidden;backdrop-filter:blur(8px);transition:border-color .3s,box-shadow .3s;}
+.hcard:hover{border-color:rgba(240,165,0,.45);box-shadow:0 0 28px rgba(240,165,0,.18),inset 0 0 20px rgba(240,165,0,.05);}
 .hcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);}
 .hcn{font-family:'Inter',sans-serif;font-size:38px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:4px;letter-spacing:-.03em;}
 .hcl{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);background:var(--gold-bg);border:1px solid var(--gold-line);padding:4px 9px;margin-bottom:8px;}
@@ -157,8 +157,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 .split-label{
   font-size:11px;font-weight:700;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--teal);
-  background:var(--gold-bg);border:1px solid var(--gold-line);
+  text-transform:uppercase;color:var(--gold-hi);
+  background:rgba(11,24,41,.55);border:1px solid var(--gold-line);
+  backdrop-filter:blur(4px);
   padding:4px 9px;
   margin-bottom:14px;display:inline-block;
 }
